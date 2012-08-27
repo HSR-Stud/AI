@@ -4,7 +4,7 @@
 \include{revision}
 \newcommand{\titleinfo}{Wissensbasierte Systeme - Formelsammlung}
 \newcommand{\authorinfo}{R. Nestler}
-\newcommand{\versioninfo}{$Revision: \revision $ - powered by \LaTeX}
+\newcommand{\versioninfo}{$Revision: \revision$ - powered by \LaTeX}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Standard projektübergreifender Header für
@@ -16,13 +16,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \include{header/header}
 
+\renewcommand{\arraystretch}{1.0}
+
 \usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage[compact]{titlesec}
+\usepackage[belowskip=-10pt,aboveskip=0pt]{caption}
+\titlespacing{\section}{0pt}{*0}{*0}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+%\setlength{\headsep}{2pt}
+
+%\parskip 0pt
+
+\setlist{nosep}
+
+\lstset{
+	tabsize=2,
+	language=Mathematica,
+	basicstyle=\footnotesize\sffamily,
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
 
 % Möglichst keine Ergänzungen hier, sondern in header.tex
 \begin{document} 
-
-\tableofcontents
-\newpage
 
 \input{sections/1_Mathematica.tex}
 \input{sections/2_Optimierungen.tex}
